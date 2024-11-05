@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/start.dart';
 
 class Doctors extends StatefulWidget {
@@ -111,6 +112,9 @@ class _DoctorsState extends State<Doctors> {
           },
         ),
         title: Text('Doctors List'),
+        actions: [
+          LanguageToggle()
+        ],
       ),
       body: ListView.builder(
         itemCount: doctors.length,

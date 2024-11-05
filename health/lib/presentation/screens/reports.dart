@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/pdfView.dart';
 import 'package:health/presentation/screens/selectPatient.dart';
 import 'package:health/presentation/screens/start.dart';
@@ -98,6 +99,9 @@ class _ReportsState extends State<Reports> {
           },
         ),
         title: const Text('Select Test'),
+        actions: [
+          LanguageToggle(),
+        ],
       ),
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

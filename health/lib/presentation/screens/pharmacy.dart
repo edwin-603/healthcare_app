@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/start.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -136,6 +137,9 @@ class _PharmacyState extends State<Pharmacy> {
         ),
         title: Text('Pharmacy'),
         centerTitle: true,
+        actions: [
+          LanguageToggle(),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

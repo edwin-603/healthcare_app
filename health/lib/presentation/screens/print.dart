@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/start.dart';
 
 // Sample list of report types and their corresponding reports
@@ -116,6 +117,8 @@ class _PrinterState extends State<Printer> {
               onPressed: () => Navigator.pop(context),
               child: Text('OK'),
             ),
+            LanguageToggle(),
+
           ],
         ),
       );

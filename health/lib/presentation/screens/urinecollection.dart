@@ -1,5 +1,6 @@
 import 'dart:math'; // Import this to generate random numbers
 import 'package:flutter/material.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/selectPatient.dart';
 import 'package:health/presentation/screens/start.dart';
 
@@ -94,6 +95,9 @@ class _UrineCollectionState extends State<Urinecollection> {
           },
         ),
         title: Text('Urine Collection'),
+        actions: [
+          LanguageToggle(),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

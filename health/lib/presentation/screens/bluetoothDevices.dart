@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/start.dart';
 
 class BluetoothDevices extends StatefulWidget {
@@ -27,6 +28,9 @@ class _BluetoothDevicesState extends State<BluetoothDevices> {
             navigateToScreen(Start());
           },
         ),
+        actions: [
+          LanguageToggle(),
+        ],
       ),
       body: SingleChildScrollView(
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/start.dart';
 import 'package:flutter_signature_pad/flutter_signature_pad.dart';
 
@@ -89,6 +90,9 @@ class _ConsultationState extends State<Consultation> {
           },
         ),
         title: Text('Consultation'),
+        actions: [
+          LanguageToggle(),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/appointments.dart';
 import 'package:health/presentation/screens/doctors.dart';
 import 'package:health/presentation/screens/employees.dart';
@@ -164,24 +165,8 @@ class _StartState extends State<Start> {
           },
         ),
         actions: [
-          DropdownButton<String>(
-            value: selectedLanguage,
-            icon: Icon(Icons.language),
-            items: [
-              DropdownMenuItem(value: 'en-US', child: Text('English')),
-              DropdownMenuItem(value: 'es-ES', child: Text('Spanish')),
-              DropdownMenuItem(value: 'fr-FR', child: Text('French')),
-              DropdownMenuItem(value: 'ta-IN', child: Text('Tamil')),
-            ],
-            onChanged: (String? newLang) {
-              if (newLang != null) changeLanguage(newLang);
-            },
-          ),
-          IconButton(
-            icon: Icon(isMuted ? Icons.volume_off : Icons.volume_up),
-            onPressed: toggleMute,
-          ),
-        ],
+          LanguageToggle(),
+        ]
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),

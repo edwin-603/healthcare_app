@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/start.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -34,6 +35,9 @@ class _VitalsState extends State<Vitals> {
         ),
         title: const Text('Bluetooth Native'),
         centerTitle: true,
+        actions: [
+          LanguageToggle(),
+        ],
       ),
       body: Column(
         children: [

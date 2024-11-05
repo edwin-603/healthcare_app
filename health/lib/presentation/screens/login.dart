@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:health/presentation/widgets/language.controller.dart';
 import 'package:health/presentation/screens/register.dart';
 import 'package:health/presentation/screens/start.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -116,21 +117,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          DropdownButton<String>(
-            value: selectedLanguage,
-            icon: Icon(Icons.language),
-            items: [
-              DropdownMenuItem(value: 'en-US', child: Text('English')),
-              DropdownMenuItem(value: 'ta-IN', child: Text('Tamil')),
-            ],
-            onChanged: (String? newLang) {
-              if (newLang != null) changeLanguage(newLang);
-            },
-          ),
-          IconButton(
-            icon: Icon(isMuted ? Icons.volume_off : Icons.volume_up),
-            onPressed: toggleMute,
-          ),
+          LanguageToggle(),
         ],
       ),
       body: Padding(
